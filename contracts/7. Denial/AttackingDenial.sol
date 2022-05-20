@@ -4,10 +4,12 @@ import "./Denial.sol";
 
 contract AttackingDenial {
     address payable public contractAddress;
-
     constructor(address payable _contractAddress) {
         contractAddress = _contractAddress;
     }
 
     //Code me!
+    fallback() external payable {
+        assert(true);
+    }
 }
